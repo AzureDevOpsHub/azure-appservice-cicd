@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-    res.send("Welcome! My Node.js application is running on Azure App Service.");
+  res.send("Version 2.0 - Automatically deployed using GitHub Actions CI/CD!");
 });
 
 app.get("/health", (req, res) => {
