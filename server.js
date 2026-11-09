@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-  res.send("Version 2.0 - Automatically deployed using GitHub Actions CI/CD!");
+  res.send("Version 1.0 - Previous Stable Release");
 });
 
 app.get("/health", (req, res) => {
