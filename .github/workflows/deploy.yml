@@ -36,9 +36,11 @@ jobs:
         run: zip -r release.zip package.json server.js node_modules
 
       # Step 6: Deploy to Azure App Service
-      - name: Deploy to Azure
+            # Step 6: Deploy to Staging Slot
+      - name: Deploy to Staging
         uses: azure/webapps-deploy@v3
         with:
           app-name: demo-webapp
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          slot-name: staging
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_STAGING }}
           package: release.zip
